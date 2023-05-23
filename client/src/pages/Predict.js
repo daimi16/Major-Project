@@ -16,7 +16,8 @@ export default function Predict() {
       const form = new FormData();
       form.append("image", image);
       console.log(image);
-      let response = await fetch("http://localhost:5000/predict", {
+      let response = await fetch(window.location.hostname + ":8000/predict", {
+        // let response = await fetch("http://localhost:5000/predict", {
         method: "POST",
         body: form,
       });
