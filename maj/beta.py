@@ -524,7 +524,7 @@ lab={0: 'ABBOTTS BABBLER',
  512: 'YELLOW CACIQUE',
  513: 'YELLOW HEADED BLACKBIRD',
  514: 'ZEBRA DOVE'}
-model = keras.models.load_model('C:/Users/sabda/OneDrive/Desktop/Major Project/model/EfficientNetB0-515-(224 X 224)- 98.95.h5',compile=False)
+model = keras.models.load_model('./model/EfficientNetB0-515-(224 X 224)- 98.95.h5',compile=False)
 def upload_predict(upload_images, model):
     
         size = (224,224)    
@@ -579,8 +579,8 @@ def pred():
      return jsonify(result)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+      app.run(port=8000)
         
         
 
